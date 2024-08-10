@@ -20,4 +20,4 @@ source /home/nberardo/myenv/bin/activate
 
 # 3 Run the python script
 
-python main.py /home/eaiello/ImageNet/
+python main.py --batch-size 256 /home/eaiello/ImageNet/
