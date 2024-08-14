@@ -107,6 +107,8 @@ def main_worker(gpu, args):
         start_epoch = ckpt['epoch']
         model.load_state_dict(ckpt['model'])
         optimizer.load_state_dict(ckpt['optimizer'])
+
+        print("Found checkpoint and loaded!!!")
     else:
         start_epoch = 0
 
