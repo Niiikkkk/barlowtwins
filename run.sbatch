@@ -20,4 +20,5 @@ source /home/nberardo/myenv/bin/activate
 
 # 3 Run the python script
 
-python main.py --batch-size 256 --epochs 100 /home/eaiello/ImageNet/
+python evaluate.py /home/eaiello/ImageNet/ /home/nberardo/barlowtwins/checkpoint/resnet50.pth --lr-classifier 0.3
+#python main.py --batch-size 256 --epochs 100 /home/eaiello/ImageNet/
