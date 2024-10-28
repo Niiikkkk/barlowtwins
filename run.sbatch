@@ -2,7 +2,7 @@
 #SBATCH --time=72:00:00
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:2
 #SBATCH --job-name=barlowtwins
 #SBATCH --mail-user=s319439@studenti.polito.it
 #SBATCH --mail-type=END
@@ -20,5 +20,6 @@ source /home/nberardo/myenv/bin/activate
 
 # 3 Run the python script
 
-python evaluate.py /home/eaiello/ImageNet/ /home/nberardo/barlowtwins/resnet50.pth --lr-classifier 0.3 --checkpoint-dir /home/nberardo/barlowtwins/checkpoint/lincls_down/
-#python main.py --batch-size 256 --epochs 100 /home/eaiello/ImageNet/
+#python evaluate.py /home/eaiello/ImageNet/ /home/nberardo/barlowtwins/resnet50.pth --lr-classifier 0.3 --checkpoint-dir /home/nberardo/barlowtwins/checkpoint/lincls_down/
+python main.py --batch-size 256 --epochs 100 /home/eaiello/ImageNet/ \
+  --checkpoint-dir /home/nberardo/barlowtwins/checkpoint_swin/
